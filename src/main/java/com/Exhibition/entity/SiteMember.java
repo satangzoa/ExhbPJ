@@ -14,7 +14,7 @@ public class SiteMember {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Integer id;
+	private Integer mid;
 	
 	@Column(unique = true)
 	private String username;

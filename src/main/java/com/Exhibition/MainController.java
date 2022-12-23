@@ -18,13 +18,19 @@ public class MainController {
 	
 	private final MemberService memberService;
 
-	@RequestMapping("/")
+	@RequestMapping("/")//메인페이지를 join_form으로 해놔서 MemberForm memberForm이 필요하다
 	public String home(MemberForm memberForm) {
 		return "join_form";
 	}
 	
 	
-	
+	 
+//	 @RequestMapping("join")
+//	 public String join(MemberForm memberForm) {//
+//		 
+//	
+//		 return "join_form";
+//	 }
 	
 	 @PostMapping(value = "/joinOk")
 		public String joinOk(@Valid MemberForm memberForm, BindingResult bindingResult) {
@@ -41,10 +47,14 @@ public class MainController {
 				bindingResult.reject("joinFail", "이미 등록된 아이디입니다.");
 				return "join_form";
 			}
-			return "redirect:list";
+			return "redirect:login_form";
 		}
 
-	
+	 
+	 @RequestMapping("/login_form")
+	 public String login_form() {
+		 return "home";
+	 }
 }
 
 

@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class SiteMember {
+public class SiteMember {//오라클디비에 sitemember 테이블 자동 생성
 
 	
 	@Id

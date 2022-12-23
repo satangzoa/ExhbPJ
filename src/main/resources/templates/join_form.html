@@ -12,11 +12,11 @@
    		 <div class="container">
 		<h5 class="my-3 border-bottom pb-2">회원 가입</h5>
 		<form th:action="@{/joinOk}" method="post" th:object="${memberForm}">
-		<!--  <div>
+		  <div>
 				<div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
 					<div th:each="err:${#fields.allErrors()}" th:text="${err}"></div>
 				</div>	
-			</div>		-->
+			</div>		
 			<div>
 				<label class="form-label">사용자ID</label>
 				<input type="text" name="username" class="form-control" th:field="*{username}">

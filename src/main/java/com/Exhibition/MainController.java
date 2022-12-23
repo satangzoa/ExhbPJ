@@ -19,7 +19,7 @@ public class MainController {
 	private final MemberService memberService;
 
 	@RequestMapping("/")
-	public String home() {
+	public String home(MemberForm memberForm) {
 		return "join_form";
 	}
 	
